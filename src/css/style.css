@@ -1,0 +1,143 @@
+body{
+    background-color: var(--neutral-dark);
+    font-family: 'Outfit', sans-serif;
+}
+.fundo-da-pagina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 25px;
+}
+.card-principal{
+    max-width: 350px;
+    background-color: var(--neutral-medium);
+    border-radius: 15px;
+    padding: 25px ;
+}
+
+.card-principal .image-link{
+    position: relative;
+    display: flex;
+}
+
+.card-principal .image-link .image{
+    width: 100%;
+    border-radius: 7px; 
+
+}
+
+.card-principal .image-link::before{
+    content: '';
+    background-color: var(--primary-medium);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3 ease-in-out;
+    
+}
+
+.card-principal .image-link::after{
+    content: '';
+    background: url(../images/icon-view.svg) no-repeat center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3 ease-in-out;
+}
+
+.card-principal .image-link:hover::before {
+    opacity: 0.4;
+
+}
+.card-principal .image-link:hover::after{
+    opacity: 1;
+}
+
+.card-principal .title-link .title{
+    font-size: 25px;
+    font-family: 'Outfit', sans-serif;;
+    color: #ffffff;
+    margin: 20px 0 20px;
+}
+
+.card-principal .title-link .title:hover{
+    color: var(--primary-medium);
+}
+
+.card-principal .about{
+    color: var(--primary-soft);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 23px;
+}
+
+.card-principal .informacoes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card-principal .informacoes .price{
+    color: var(--primary-medium);
+    margin: 10px;
+    display: flex;
+    
+}
+
+.card-principal .informacoes .price::before{
+    content: '';
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 11px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+
+}
+
+.card-principal .informacoes .days-left{
+    color: var(--primary-soft);
+    margin: 10px;
+    display: flex;
+}
+
+.card-principal .informacoes .days-left::before{
+    content: '';
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    display:inline-block ;
+    margin-right: 5px;
+}
+
+.card-principal .creator{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--primary-soft) ;
+    padding-top: 15px;
+
+}
+.card-principal .creator .avatar{
+    max-width: 35px;
+    border: solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.card-principal .creator .text{
+    color: var(--primary-soft);
+}
+
+.card-principal .creator .text .name{
+    color: #ffffff;
+}
+
+.card-principal .creator .text .name:hover{
+    color: var(--primary-medium);
+}
